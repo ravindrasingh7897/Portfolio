@@ -107,7 +107,7 @@ function ProjectCard({ project }) {
                   rel="noopener noreferrer"
                   className="text-orange-400 hover:text-orange-300 underline transition-colors duration-200"
                 >
-                  'Code'
+                  &apos;Code&apos;
                 </a>
               )}
               {project.code && project.demo && <span className="text-gray-400">, </span>}
@@ -118,11 +118,11 @@ function ProjectCard({ project }) {
                   rel="noopener noreferrer"
                   className="text-orange-400 hover:text-orange-300 underline transition-colors duration-200"
                 >
-                  'Live Demo'
+                  &apos;Live Demo&apos;
                 </a>
               )}
               {!project.code && !project.demo && (
-                <span className="text-gray-500 italic">'Coming Soon'</span>
+                <span className="text-gray-500 italic">&apos;Coming Soon&apos;</span>
               )}
               <span className="text-gray-400">],</span>
             </div>

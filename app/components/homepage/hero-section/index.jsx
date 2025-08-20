@@ -9,10 +9,10 @@ import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiCodeforces, SiLeetcode } from "react-icons/si";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 function TypingEffect() {
-  const designations = ["Software Developer", "Problem Solver", "Coding Enthusiast"];
+  const designations = useMemo(() => ["Software Developer", "Problem Solver", "Coding Enthusiast"], []);
   const [currentDesignation, setCurrentDesignation] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -65,7 +65,7 @@ function HeroSection() {
         <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
           <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
             Hi, 
-            I'm {' '}
+            I&apos;m {' '}
             <span className=" text-pink-500">{personalData.name}</span>
             <br />
             <TypingEffect />
