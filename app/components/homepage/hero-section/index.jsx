@@ -17,8 +17,22 @@ function TypingEffect() {
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(150);
+  const [isMounted, setIsMounted] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+    // Add a small delay to ensure proper initialization
+    const initTimer = setTimeout(() => {
+      setHasStarted(true);
+    }, 100);
+    
+    return () => clearTimeout(initTimer);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted || !hasStarted) return;
+
     const handleTyping = () => {
       const current = designations[currentDesignation];
       
@@ -40,11 +54,11 @@ function TypingEffect() {
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
-  }, [currentText, isDeleting, currentDesignation, designations, typingSpeed]);
+  }, [currentText, isDeleting, currentDesignation, designations, typingSpeed, isMounted, hasStarted]);
 
   return (
     <span className="text-[#16f2b3]">
-      {currentText}
+      {isMounted ? currentText : designations[0]}
       <span className="animate-pulse">|</span>
     </span>
   );

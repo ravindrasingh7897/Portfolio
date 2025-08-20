@@ -11,8 +11,7 @@ export const personalData = {
   codeforces: 'https://codeforces.com/profile/Rss_7897',
   linkedIn: 'https://www.linkedin.com/in/rss7897/',
   twitter: 'https://twitter.com/Rss7897',
-  stackOverflow: 'https://stackoverflow.com/users/16840768/abu-said',
   leetcode: "https://leetcode.com/u/rss7897/",
-  devUsername: "said7388",
-  resume: "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing"
+  devUsername: "RavindraSingh",
+  resume: "https://drive.google.com/file/d/1cipEKMp6TFPZRgx0E-W0QPdUvG7eqJdS/view?usp=sharing"
 }
